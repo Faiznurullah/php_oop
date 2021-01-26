@@ -1,6 +1,6 @@
 <?php
 
- abstract class  buah{
+ abstract class buah{
 
      private $buah;
 

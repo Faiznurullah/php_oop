@@ -3,6 +3,7 @@
 echo "<center><b>Belajar OOP PHP Constructor Method</b></center>";
 
 //kita kasih nama class Bahan.
+
 class Bahan{
 
     //ini adalah Property.
@@ -158,6 +159,83 @@ echo $objek_buku->ambil_cerita();
 
 echo "<hr>";
 
+ class buah_apel{
+     public $warna = "Hitam",
+            $rasa = "Manis";
+
+            public function __construct($warna, $rasa){
+           $this->warna = $warna;
+           $this->rasa = $rasa;
+            }
+            
+     public function cetakapel(){
+         return "Buah Apel $this->warna ini Rasanya $this->rasa";
+     }       
+ }
+
+$objek_buah_apel = new buah_apel("Merah", "Manis Ada Yang Masam");
+echo $objek_buah_apel->cetakapel();
+echo "<hr>";
+
+class buah_mangga{
+    public $warna,
+           $rasa;
+
+           public function __construct($warna, $rasa){
+         $this->warna = $warna;
+         $this->rasa = $rasa;
+           }
+
+
+           public function cetakmangga(){
+               return "Buah Mangga $this->warna ini Rasanya Sangat $this->rasa";
+           }
+
+}
+
+$objek_buah_mangga = new buah_mangga("Oren", "Manis...");
+echo $objek_buah_mangga->cetakmangga();
+echo "<hr>";
+
+class buah_jeruk{
+    public $nama,
+           $rasa;
+
+           public function __construct($nama, $rasa){
+             $this->nama = $nama;
+             $this->rasa = $rasa;
+           }
+
+    public function cetakjeruk(){
+        return "Buah $this->nama Ini Sangat $this->rasa";
+    }       
+}
+
+$objek_buah_jeruk = new buah_jeruk("Jeruk", "Masam");
+echo $objek_buah_jeruk->cetakjeruk();
+echo "<hr>";
+
+
+ class televisi{
+
+     public $nama,
+            $inch;
+
+    public function __construct($nama,$inch){
+        $this->nama = $nama;
+        $this->inch = $inch;
+    }
+
+    public function cetak_tv(){
+        return "Televisi Merk $this->nama dengan ukuran $this->inch";
+    }
+
+ }
+ $objek_samsung = new televisi("Samsung", "32 Inch");
+ $objek_polytron = new televisi("Polytron","34 Inch");
+ echo $objek_samsung->cetak_tv()."<br>";
+ echo $objek_polytron->cetak_tv()."<br>";
+echo "<hr>";
 
 
 ?>

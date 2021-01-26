@@ -29,6 +29,7 @@ $this->type = $type;
 
 }
 
+//ini anak class
 class nyetakfilm extends nama{
 
     public function nyetakinfo(){
@@ -41,6 +42,7 @@ class nyetakfilm extends nama{
 
 }
 
+//ini anak class
 class nyetakbuku extends nama{
 
     public function nyetakwingfo(){
@@ -76,6 +78,7 @@ public $nama,
       $this->pabrikan = $pabrikan;
       $this->jumlahban1 = $jumlahban1;
       $this->jumlahban2 = $jumlahban2;
+      
        }
 
 
@@ -91,6 +94,7 @@ public function nyetakmotorr(){
 }
 
 class nyetakmobil extends kendaraan{
+
 public function nyetakmobill(){
 
     $str4 = "{$this->nama}:,{$this->merek}:,&nbsp;{$this->pabrikan},&nbsp;{$this->jumlahban2},&nbsp;";
@@ -106,58 +110,79 @@ $objek_mobil= new nyetakmobil("Mobil", "Avanza", "Toyota",0, 4);
 echo $objek_motor->nyetakmotorr()."<br>";
 echo $objek_mobil->nyetakmobill()."<br>";
 
-echo "<hr>";
-
-//ini Contoh3 Simple
-echo "Contoh 3 <br>";
-
-class parentt{
-
- public $nama="Andika Galih",
-        $umur= 16;
-
-}
-
-
-class childd extends parentt{
-
-    public function tampilinfo(){
-         return "$this->nama,$this->umur";
-    }
-
-}
-
-$objek_child = new childd();
-echo $objek_child->tampilinfo();
 
 echo "<hr>";
-//Contoh 4
-echo "Contoh 4 <br>";
 
 class ibu{
-    public $gender = "Perempuan",
-           $warnakulit = "Putih",
-           $tinggibadan = 170;
 
-           public function __construct($gender, $warnakulit, $tinggibadan){
-               $this->gender = $gender;
-               $this->warnakulit = $warnakulit;
-               $this->tinggibadan = $tinggibadan;
-           }
-           public function fenotipe(){
-
-return "$this->gender,$this->warnakulit,$this->tinggibadan";
-
-           }
+ public $warna= "Putih",
+        $hidung= "Mancung",
+        $tinggi= 170,
+        $berat= 68;
+    
+        
+public function cetak_ibu(){
+    return "$this->warna, $this->hidung, $this->tinggi, $this->berat";
 }
 
+}
+ 
 class anak extends ibu{
 
+public function cetak_anak(){
+
+        $this->tinggi = 180;
+        $this->berat = 75;
+
+return "$this->warna, $this->hidung, $this->tinggi, $this->berat";
+}
 
 }
 
-$objek_anak = new anak("Laki-Laki", "Sawo Matang", 185);
-echo $objek_anak->fenotipe();
+$objek_ibu = new ibu;
+$objek_anak = new anak;
+echo $objek_anak->cetak_anak()."<br>";
+echo $objek_ibu->cetak_ibu()."<br>";
+
+
+  echo "<hr>";
+
+
+  class bapak{
+  protected $warna,
+            $hidung,
+            $tinggi,
+            $berat;
+
+     public function __construct(){
+
+     $this->warna = "Sawo Matang";
+     $this->hidung = "Mancung";
+     $this->tinggi = 175;
+     $this->berat = 45;
+
+     } 
+
+  }
+
+  class anak_hrm extends bapak{
+
+public function cetak_anak(){
+    $this->warna = "Putih";
+    $this->tinggi = 160;
+    $this->berat = 65;
+
+    return "$this->warna, $this->hidung, $this->tinggi, $this->berat";
+   
+}
+
+  }
+
+  $objek_anak_bapak = new anak_hrm();
+  echo $objek_anak_bapak->cetak_anak();
+
+
+   echo "<hr>";
 
 
 ?>

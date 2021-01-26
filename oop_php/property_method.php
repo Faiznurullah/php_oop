@@ -125,6 +125,8 @@ echo $wingfo->info();
 
 echo "<hr>";
 
+//contoh 4
+echo "Contoh 4 <br>";
 class Buku{
 public $nama = "Laskar Wani",
        $Penulis = "Raden Wijaya Kusuma",
@@ -143,8 +145,8 @@ echo $objek_buku->ambil()."<br>";
 
 echo "<hr>";
 
-//ini contoh 4
-echo "Contoh 4 <br>";
+//ini contoh 5
+echo "Contoh 5<br>";
 
 class Namasaya{
     public $nama = "Faiz nurullah",
@@ -164,4 +166,147 @@ echo $objek_nama_saya->cetaknamasaya()."<br>";
 $objek_nama_saya->nama="Fazrul Amin";
 echo $objek_nama_saya->nama."<br>";
 
+echo "<hr>";
+
+//Contoh 6
+echo "Contoh 6 <br>";
+
+ class buah_apel{
+
+ private $warna = "Merah",
+           $rasa = "Enak",
+           $jenis = "Apel Malang";
+
+public function cetakapel(){
+    return "$this->warna, $this->rasa, $this->jenis";
+}
+
+ }
+ $objek_buah_apel = new buah_apel;
+ echo $objek_buah_apel->cetakapel();
+ echo "<hr>";
+
+ //Contoh 7
+ echo "Contoh 7 <br>";
+
+  class buah_mangga{
+   
+ private $warna = "Orange",
+         $rasa = "Manis & Masam",
+         $jenis = "Mangga Indramayu";
+
+public function cetakmangga(){
+    return "$this->warna, $this->rasa, $this->jenis";
+}
+
+  }
+  $objek_buah_mangga = new buah_mangga;
+  echo $objek_buah_mangga->cetakmangga();
+
+  echo "<hr>";
+
+  //Contoh 8
+  echo "Contoh 8 <br>";
+
+  class buah_jeruk{
+      private $warna = "Jingga",
+              $rasa = "Masam",
+              $jenis = "Jeruk Mandarin";
+
+              public function cetakjeruk(){
+                  return "$this->warna, $this->rasa, $this->jenis";
+              }
+
+  }
+  $objek_buah_jeruk = new buah_jeruk;
+  echo $objek_buah_jeruk->cetakjeruk();
+
+  echo "<hr>";
+  //Contoh 9
+  echo "Contoh 9 <br>";
+
+   class buah_naga{
+       public $warna = "Hitam",
+              $rasa = "Pahit",
+              $jenis = "Buah Naga Asia";
+
+           
+
+              public function cetaknaga(){
+                  return "$this->warna, $this->rasa, $this->jenis";
+              }
+   }
+
+   $objek_buah_naga = new buah_naga;
+   echo $objek_buah_naga->cetaknaga()."<br><br>";
+   $objek_buah_naga->warna = "Merah Maroon";
+   $objek_buah_naga->rasa = "Manis";
+   $objek_buah_naga->jenis = "Buah Naga Afrika";
+   echo $objek_buah_naga->warna."<br>";
+   echo $objek_buah_naga->rasa."<br>";
+   echo $objek_buah_naga->jenis."<br>";
+
+   echo "<hr>";
+
+   //Contoh 10
+echo "Contoh 10 <br>";
+
+ class laptop{
+     private $merk = "Samsung Notepad 10+",
+             $pabrik = "Samsung Inovation",
+             $warna = "Hitam";
+
+     public function cetaklaptop(){
+         return "Laptop Merk:$this->merk, Pabrikan: $this->pabrik, Berwarna: $this->warna";
+     }        
+             
+ }
+ $objek_laptop = new laptop;
+ echo $objek_laptop->cetaklaptop();
+
+ echo "<hr>";
+
+ //Contoh 11
+
+ echo "Contoh 11 <br>";
+
+ class carrier{
+  public $nama = "Konsina",
+         $liter = "60 Liter",
+         $warna = "Merah";
+
+  public function cetak_carrier(){
+      return "Tas $this->nama itu memiliki ruang sekitar $this->liter dan berwarna $this->warna";
+  }       
+
+ } 
+
+ $objek_carrier = new carrier;
+ echo $objek_carrier->cetak_carrier()."<br>";
+ $objek_carrier->nama = "Eiger";
+ $objek_carrier->liter = "45 Liter";
+ $objek_carrier->warna = "Biru";
+ echo $objek_carrier->nama."<br>";
+ echo $objek_carrier->liter."<br>"; 
+ echo $objek_carrier->warna."<br>";  
+  echo "<hr>";
+
+  //Contoh 12
+  echo "Contoh 12 <br>";
+
+ class oppo{
+     public $type = "A5 2020",
+            $ram  = "3GB",
+            $warna = "Putih";
+
+     public function cetak_oppo(){
+         return "OPPO $this->type, Memiliki Ram $this->ram, Dan Berwarna $this->warna";
+     }       
+
+
+ }
+
+ $objek_oppo = new oppo();
+ echo $objek_oppo->cetak_oppo();
+  
 ?>

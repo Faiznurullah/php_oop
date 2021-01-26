@@ -1,17 +1,18 @@
-
-
 <?php
 
 echo "<center><b>Belajar OOP PHP Static </b></center>";
 
 
 class Kelas{
+    //property static
   public static $nama = "Kepudang",
-         $jumlah = 30,
-         $walkel = "Reni";
+                $jumlah = 30,
+                $walkel = "Reni";
 
+  //property static
   public static $angka = 1;       
 
+        //method static
          public static function helloworld(){
              return "Hello World !  ". self::$angka++ ." Kali";
          }
@@ -81,6 +82,7 @@ echo "<hr>";
 echo "Contoh 4 <br><br>";
  
 class Kelas4{
+    
     public static $numbert = 1;
 
     public function Sayhelo(){
@@ -95,4 +97,22 @@ echo $objek_kelas4->Sayhelo()."<br>";
 echo $objek_kelas4->Sayhelo()."<br>";
 echo $objek_kelas4->Sayhelo()."<br>";
 echo $objek_kelas4->Sayhelo()."<br>";
+echo "<hr>";
+ 
+ class saya{
+
+     public static $nama = "Faiz Nurullah",
+                   $umur = 16,
+                   $type = "Pendiam";
+
+     public function sayahallo(){
+         return self::$nama;
+     }
+ }
+
+ $objek_static_saya = new saya;
+ echo $objek_static_saya->sayahallo()."<br>";
+ echo saya::$umur."<br>";
+ echo saya::$type."<br>";
+ echo "<hr>";
 ?>

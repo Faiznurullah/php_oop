@@ -40,16 +40,17 @@ echo "<hr>";
 class baju{
 
    const Merk1 = "Three Second";
+   const merk2 = "Dicoding";
 
 }
 $objek_baju = new baju;
 echo baju::Merk1."<br>";
-
+echo baju::Merk2."<br>";
 
 echo "In Line ".__LINE__."<br>";
 echo "In Folder ".__DIR__."<br>";
 
-//magic constant
+//magic constant untuk const
 // __LINE__
 // __FILE__
 // __DIR__

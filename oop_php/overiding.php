@@ -95,6 +95,7 @@ class ibu{
     $darah,
     $kulit,
     $cantik;
+    
     public function __construct($gender, $tinggi, $darah, $kulit,$cantik){
 
  $this->gender = $gender;

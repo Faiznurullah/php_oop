@@ -57,172 +57,65 @@ echo $info_bahan->cetak($produk_ganti);
 
 echo "<hr>";
 
+ class saya{
+     public $nama,
+            $gender,
+            $berat,
+            $tinggi;
 
+     public function __construct($nama, $gender, $berat, $tinggi){
+    $this->nama = $nama;
+    $this->gender = $gender;
+    $this->berat = $berat;
+    $this->tinggi = $tinggi; 
+     }       
 
-//contoh 2
-echo "Contoh 2<br>";
-
-class film{
-    public $nama,
-           $karya,
-           $sutradara,
-           $produsen;
-        
-public function __construct($nama, $karya, $sutradara, $produsen) {
-
-$this->nama = $nama;
-$this->karya = $karya;
-$this->sutradara = $sutradara;
-$this->produsen = $produsen;
-
-}
-
-public function jukut() {
-
-return "$this->nama,$this->karya,$this->sutradara,$this->produsen";
-
-}
-
-}
-
-
-class printinfo{
-
-public function printt(film $film){
-
-    $str2 = "{$film->nama},{$film->karya},{$film->sutradara},{$film->produsen}";
-    return $str2;
-}
-
-}
-
-$objekfilm = new film("Filosofi Kopi","Nico Alexander Arnold", "Jimmy Kidde", "Sinema Lawak");
-$objekfilm->jukut();
-$cetak_printt = new printinfo();
-echo $cetak_printt->printt($objekfilm);
-
-echo "<hr>";
-
-//contoh 3
-echo "Contoh 3 <br>";
-
-class baju{
-  public $brand,
-         $ukuran,
-         $warna;
-
-
-public function __construct($brand, $ukuran,$warna){
-    $this->brand = $brand;
-    $this->ukuran = $ukuran;
-    $this->warna = $warna;
-}
-
-
-   public function tok() {
-return "$this->brand,$this->ukuran,$this->warna";
-   }      
-
-
-}
-
-class tampilinfo{
-
-public function tampil(baju $baju){
-
-$str3 = "{$baju->brand},{$baju->ukuran},{$baju->warna}";
-return $str3;
-
-}
-
-
-
-}
-
-
-
-$objekbaju = new baju("Three Second", "Xl", "Hitam");
-
-$tampil_info = new tampilinfo();
-echo $tampil_info->tampil($objekbaju)."<br>";
-
-echo "<hr>";
-
-//contoh 4
-echo "Contoh 4 <br>";
-
-class buku{
-public $judul,
-       $penulis,
-       $penerbit;
-
-public function __construct($judul,$penulis,$penerbit){
-
-$this->judul = $judul;
-$this->penulis = $penulis;
-$this->penerbit = $penerbit;
-
-
-}    
-
-
- public function call_buku(){
-
- return "$this->judul, $this->penulis, $this->penerbit";
 
  }
 
+ class cetaksaya{
+     public function cetak_saya(saya $saya){
+         $var_saya = "Nama Saya {$saya->nama} {$saya->gender} Berat Badan {$saya->berat} dan Tinggi Badan {$saya->tinggi}";
+         return $var_saya;
+     }
+ }
 
-
-}
-
-class cetak_buku{
-    
-public function tampil_buku(buku $objek_buku){
-
- $str8= "{$objek_buku->judul},{$objek_buku->penulis},{$objek_buku->penerbit}";
-
- return $str8;
-}
-
-}
-
-$objek_buku = new buku("Laskar Pedang", "Abi Kurniawan", "Buku Nasional");
-$objek_call_buku = new cetak_buku();
-echo $objek_call_buku->tampil_buku($objek_buku)."<br>";
-echo $objek_buku->call_buku()."<br>";
+ $objek_class_saya = new saya("Faiz Nurullah", "Laki-Laki", 65, 170);
+ $objek_class_saya_repeat = new saya("Ridwan Kamil", "Laki_Laki", 60, 170 );
+ $cetak_saya = new cetaksaya;
+echo $cetak_saya->cetak_saya($objek_class_saya)."<br>";
+echo $cetak_saya->cetak_saya($objek_class_saya_repeat);
 echo "<hr>";
-//Contoh 5
-echo "Contoh 5 <br>";
 
-class Saya{
-    protected $nama = "Obby Makassh",
-            $umur = 16,
-            $tinggi = 170;
+  class youtuber{
+     public $pertama,
+            $kedua,
+            $ketiga,
+            $keempat;
 
-       public function __construct($nama, $umur, $tinggi){
-  $this->nama = $nama;
-  $this->umur = $umur;
-  $this->tinggi = $tinggi;
-       }     
-
-       
-}
-
-
-class cetaksaya extends Saya{
-
-    public function __construct(){
-
+    public function __construct($dilan, $windah, $miaw, $limit){
+        $this->pertama = $dilan;
+        $this->kedua = $windah;
+        $this->ketiga = $miaw;
+        $this->keempat = $limit;
     }
 
-    public function cetakwingfo(Saya $objek_saya){
-        $stre = "Nama Saya:{$objek_saya->nama},Umur Saya:{$objek_saya->umur} Tahun ,Dan Tinggi Badan Saya:{$objek_saya->tinggi} cm";
-     return $stre;
-            }     
-}
 
-$objek_saya = new Saya("Faiz Nurullah", 16, 170);
-$objek_cetak_saya = new cetaksaya();
-echo $objek_cetak_saya->cetakwingfo($objek_saya);
+  }
+
+  class cetak_youtuber{
+
+   public function cetak_you(youtuber $youtuber){
+    $string_yt = "Pertama {$youtuber->pertama}, Kedua {$youtuber->kedua}, Ketiga {$youtuber->keempat}, Dan Keempat {$youtuber->keempat}";
+    return $string_yt;
+   }
+
+  }
+
+  $objek_youtuber_gaming = new youtuber("Dilan Pros", "Windah Basudara", "Miawaug", "Jes No Limit", "MR 05");
+  $objek_youtuber_coding = new youtuber("WPU", "Sekolah Koding", "Onno Center", "Programmer Zaman Now", "BWA");
+  $cetak_gaming = new cetak_youtuber;
+  echo $cetak_gaming->cetak_you($objek_youtuber_gaming)."<br>";
+  echo $cetak_gaming->cetak_you($objek_youtuber_coding);
+
 ?>

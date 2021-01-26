@@ -1,10 +1,14 @@
 <?php 
 
+//public = bebas di panggil dimanapun
+//protected = hanya bisa di panggil di class itu dan keturunanya
+//private = hanya bisa di panggil di class tersebut.
 
-echo "<center><b>Belajar OOP PHP Visibility </b></center>";
+
+echo "<center><b>Belajar OOP PHP Visibility</b></center>";
 
  class Produk{
-     public
+  public
   $nama = "Lays",
   $jenis = "Makanan",
   $publisher = "Pt.Indofood";
@@ -52,6 +56,7 @@ public function kecilin(){
 public function besarin(){
 
     return $this->harga = 10000;
+    
 }
 
  }
@@ -115,5 +120,11 @@ $objek_buku = new buku();
 echo $objek_novel->tampil()."<br>";
 echo "<hr>";
 echo $objek_buku->ambil();
+echo "<hr>";
+
+//contoh 3
+
+
+
 
 ?>

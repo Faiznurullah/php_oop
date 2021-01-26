@@ -1,8 +1,5 @@
 <?php 
-
-
 echo "<center><b>Belajar OOP PHP Setter & Getter </b></center>";
-
 
 //contoh 2 
 class Novel{
@@ -108,4 +105,56 @@ echo "<hr>";
 $objek_novel->setpenulis();
 //ini getter
 echo $objek_novel->getpenulis();
+echo "<hr>";
+
+ class orang{
+     public $kulit;
+
+    public function __construct($kulit){
+        return $this->kulit = $kulit;
+    }
+    
+    
+    
+    public function setkulit($kulitt = "Sawo Matang"){
+        $this->kulit = $kulitt;
+    }
+
+    public function getkulit(){
+        return $this->kulit;
+    }
+
+ }
+ $objek_orang = new orang("Kulit Putih");
+ echo $objek_orang->setkulit();
+ echo $objek_orang->getkulit();
+
+echo "<hr>";
+
+ class jumlahroda{
+  private $roda;
+
+  public function __construct($roda){
+   $this->roda = $roda;
+  }
+
+  public function setroda(){
+      $this->roda = 2;
+  }
+
+  public function getroda(){
+      return $this->roda." Roda";
+  }
+
+
+ }
+ 
+ $objek_motor = new jumlahroda(4);
+ echo $objek_motor->setroda();
+ echo $objek_motor->getroda();
+ echo "<hr>";
+
+ 
+ 
+
 ?>
