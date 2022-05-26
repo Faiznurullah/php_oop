@@ -216,26 +216,32 @@ echo $objek_buah_jeruk->cetakjeruk();
 echo "<hr>";
 
 
- class televisi{
+ //ini adalah class
+ class php{
 
-     public $nama,
-            $inch;
+    //ini adalah property
+    public $pertama,
+           $kedua,
+           $ketiga;
 
-    public function __construct($nama,$inch){
-        $this->nama = $nama;
-        $this->inch = $inch;
-    }
-
-    public function cetak_tv(){
-        return "Televisi Merk $this->nama dengan ukuran $this->inch";
-    }
+    //ini adalah method constructor
+    public function __construct($pertama, $kedua, $ketiga){
+     $this->pertama = $pertama;
+     $this->kedua = $kedua;
+     $this->ketiga = $ketiga;
+    }    
+    
+    //ini adalah method 
+    public function cetak_php(){
+        
+return "Keunggulan Bahasa Pemrogramman Php adalah $this->pertama, $this->kedua, $this->ketiga";
 
  }
- $objek_samsung = new televisi("Samsung", "32 Inch");
- $objek_polytron = new televisi("Polytron","34 Inch");
- echo $objek_samsung->cetak_tv()."<br>";
- echo $objek_polytron->cetak_tv()."<br>";
-echo "<hr>";
+}
+ 
+ //ini adalah onjek 
+ $objek_php = new php("Bahasa Pemrograman Populer", "Keren Dan Open Source", "Banyak Di Gunakan Orang");
+ echo $objek_php->cetak_php();
 
 
 ?>

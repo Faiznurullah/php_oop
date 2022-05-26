@@ -1,0 +1,17 @@
+  Belajar PHP Berbasis Objek
+  
+- pengenalan
+- penerapan
+- property method
+- constuctor
+- objec type
+- inheritance
+- overriding
+- visibility
+- setter and getter
+- static keyword
+- constant
+- abstract class
+- interface
+- auotoloding
+- namespace

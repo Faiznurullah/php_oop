@@ -18,8 +18,8 @@ echo "<center><b> Belajar OOP PHP  </b></center>";
 
 
  class Pengenalan {
-   
-  
+
+
 
 
  }
@@ -35,10 +35,29 @@ echo "<center><b> Belajar OOP PHP  </b></center>";
 
 echo "<hr>";
 
+
+class test{
+
+
+
+}
+
+$objek_test = new test();
+$objek_test1 = new test();
+$objek_test2 = new test();
+
+echo var_dump($objek_test)."<br>";
+echo var_dump($objek_test1)."<br>";
+echo var_dump($objek_test2)."<br>";
+
+echo "<hr>";
+
+
+
  class percobaan {
 
  }
- 
+
   $d = new percobaan();
   $e = new percobaan();
   $f = new percobaan();
@@ -50,12 +69,13 @@ echo "<hr>";
 
   echo "<hr>";
 
-  class test{
+  class uji_coba {
+
 
   }
 
-  $objek_test1 = new test();
-  $objek_test2 = new test();
-  $objek_test3 = new test();
+  $identitas = new uji_coba();
+
+  echo var_dump($identitas);
 
 ?>
